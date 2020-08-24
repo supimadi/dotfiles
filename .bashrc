@@ -45,3 +45,4 @@ alias dgit='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 export TERM=termite
 export EDITOR=vim
+

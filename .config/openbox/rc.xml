@@ -42,7 +42,7 @@
                   'Active' - where the active window is -->
   </placement>
   <theme>
-    <name>Triste-Froly</name>
+    <name>Raven-Cyan</name>
     <titleLayout>NLIMC</titleLayout>
     <!--
       available characters are NDSLIMC, each can occur at most once.
@@ -153,7 +153,7 @@
      Many programs reserve space automatically, but you can use this in other
      cases. -->
   <margins>
-    <top>35</top>
+    <top>31</top>
     <bottom>6</bottom>
     <left>6</left>
     <right>6</right>
@@ -277,7 +277,7 @@
       <action name="ToggleShowDesktop"/>
     </keybind>
     <!-- Keybindings for windows -->
-    <keybind key="A-F4">
+    <keybind key="W-w">
       <action name="Close"/>
     </keybind>
     <keybind key="A-Escape">
@@ -718,13 +718,11 @@
     <!-- show the manage desktops section in the client-list-(combined-)menu -->
   </menu>
   <applications>
-
     <application name="*termite*">
       <focus>yes</focus>
       <maximized>true</maximized>
       <decor>no</decor>
     </application>
-
     <application name="*code*">
       <focus>yes</focus>
       <maximized>true</maximized>
