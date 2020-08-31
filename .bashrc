@@ -38,7 +38,7 @@ PS1="\n \[\033[0;34m\]┌───(\[\033[1;35m\]\u\[\033[0;34m\])───(\[\0
 # Aliases
 alias ..='cd ..'
 alias ls='lsd'
-alias rm='rm -i'
+alias rm='rm -I'
 alias dgit='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'
 
 # Exporting Variables
