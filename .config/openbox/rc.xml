@@ -718,7 +718,7 @@
       <maximized>true</maximized>
       <decor>no</decor>
     </application>
-    <application name="*code*">
+    <application name="vscodium">
       <focus>yes</focus>
       <maximized>true</maximized>
       <decor>no</decor>
