@@ -1,13 +1,13 @@
 ##!/usr/bin/env bash
 if [ $(bluetoothctl show | grep "Powered: yes" | wc -c) -eq 0 ]
 then
-  echo ""
+  echo ""
 else
   if [ $(echo info | bluetoothctl | grep 'Device' | wc -c) -eq 0 ]
   then 
-    echo "%{F#FFEA13}"
+    echo "%{F#FFEA13}"
   fi
-  echo "%{F#287AA9}"
+  echo "%{F#287AA9}"
 
 fi
 
