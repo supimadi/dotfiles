@@ -40,45 +40,88 @@ scrollback_lines = 10000
 # "off", "left" or "right"
 #scrollbar = off
 
+# Dracula Color Cheme
+# [colors]
+
+# # special
+# foreground      = #f8f8f2
+# foreground_bold = #f8f8f2
+# cursor          = #f8f8f2
+# background      = #282a36
+
+# # black
+# color0  = #000000
+# color8  = #4d4d4d
+
+# # red
+# color1  = #ff5555
+# color9  = #ff6e67
+
+# # green
+# color2  = #50fa7b
+# color10 = #5af78e
+
+# # yellow
+# color3  = #f1fa8c
+# color11 = #f4f99d
+
+# # blue
+# color4  = #caa9fa
+# color12 = #caa9fa
+
+# # magenta
+# color5  = #ff79c6
+# color13 = #ff92d0
+
+# # cyan
+# color6  = #8be9fd
+# color14 = #9aedfe
+
+# # white
+# color7  = #bfbfbf
+# color15 = #e6e6e6
+
+# IceBerg Color Scheme
 [colors]
 
 # special
-foreground      = #f8f8f2
-foreground_bold = #f8f8f2
-cursor          = #f8f8f2
-background      = #282a36
+foreground      = #c6c8d1
+foreground_bold = #c6c8d1
+cursor          = #c6c8d1
+background      = #111321
 
 # black
-color0  = #000000
-color8  = #4d4d4d
+color0  = #111321
+color8  = #48538a
 
 # red
-color1  = #ff5555
-color9  = #ff6e67
+color1  = #e27878
+color9  = #e98989
 
 # green
-color2  = #50fa7b
-color10 = #5af78e
+color2  = #b4be82
+color10 = #c0ca8e
 
 # yellow
-color3  = #f1fa8c
-color11 = #f4f99d
+color3  = #e2a478
+color11 = #e9b189
 
 # blue
-color4  = #caa9fa
-color12 = #caa9fa
+color4  = #84a0c6
+color12 = #91acd1
 
 # magenta
-color5  = #ff79c6
-color13 = #ff92d0
+color5  = #a093c7
+color13 = #ada0d3
 
 # cyan
-color6  = #8be9fd
-color14 = #9aedfe
+color6  = #89b8c2
+color14 = #95c4ce
 
 # white
-color7  = #bfbfbf
-color15 = #e6e6e6
+color7  = #c6c8d1
+color15 = #d2d4de
+
 
 [hints]
 #font = Monospace 12
