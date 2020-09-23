@@ -273,7 +273,7 @@
         <to>4</to>
       </action>
     </keybind>
-    <keybind key="W-d">
+    <keybind key="W-Space">
       <action name="ToggleShowDesktop"/>
     </keybind>
     <!-- Keybindings for windows -->
@@ -717,6 +717,12 @@
       <focus>yes</focus>
       <maximized>true</maximized>
       <decor>no</decor>
+    </application>
+    <application name="emacs">
+      <focus>yes</focus>
+      <decor>no</decor>
+      <maximized>true</maximized>
+      <fullscreen>true</fullscreen>
     </application>
     <application name="vscodium">
       <focus>yes</focus>
