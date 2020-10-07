@@ -6,12 +6,10 @@
 [[ $- != *i* ]] && return
 
 
-#Powerline
-#powerline-daemon -q
-#POWERLINE_BASH_CONTINUATION=1
-#POWERLINE_BASH_SELECT=1
-#. /usr/share/powerline/bindings/bash/powerline.sh
-
+# Function for parsing git branch
+parse_git_branch() {
+        git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
+}
 
 # Function for getting virtualenv name
 function virtualenv_info(){
@@ -32,14 +30,15 @@ VENV="\$(virtualenv_info)";
 
 
 # Prompt Customize
-PS1="\n \[\033[0;34m\]┌───(\[\033[1;35m\]\u\[\033[0;34m\])───(\[\033[1;32m\]\w\[\033[0;34m\])${VENV} \n └> \[\033[1;36m\]\$ \[\033[0m\]";
-
+PS1="\n \[\033[0;34m\]┌───(\[\033[1;35m\]\u\[\033[0;34m\])───(\[\033[1;32m\]\w\[\033[0;34m\])${VENV}\n └> \[\033[1;36m\]\$ \[\033[0m\]";
 
 # Aliases
 alias ..='cd ..'
 alias ls='lsd'
 alias rm='rm -I'
 alias dgit='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'
+alias youtube-dl='youtube-dl -i'
+alias firefox='firefox-developer-edition'
 
 # Exporting Variables
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
