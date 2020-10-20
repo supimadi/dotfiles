@@ -2,6 +2,12 @@
 # ~/.bashrc
 #
 
+# Exporting Variables
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+export TERM="xterm-256color"
+export EDITOR='vim'
+
+
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
@@ -35,13 +41,13 @@ PS1="\n \[\033[0;34m\]┌───(\[\033[1;35m\]\u\[\033[0;34m\])───(\[\0
 # Aliases
 alias ..='cd ..'
 alias ls='lsd'
-alias rm='rm -I'
+alias rm='rm -i'
 alias dgit='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'
 alias youtube-dl='youtube-dl -i'
 alias firefox='firefox-developer-edition'
+alias grep='grep --color=auto'
 
-# Exporting Variables
-export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
-export TERM=termite
-export EDITOR=vim
+# ignore upper and lowercase when TAB completion
+bind "set completion-ignore-case on"
+
 

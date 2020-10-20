@@ -25,7 +25,7 @@ drun-show-actions: false;
 drun-display-format: "{name}";
 /*	disable-history: false;*/
 /*	ignored-prefixes: "";*/
-sort: false;
+sort: true;
 sorting-method: "fzf";
 /*	case-sensitive: false;*/
 /*	cycle: true;*/
