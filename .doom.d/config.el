@@ -52,3 +52,10 @@
 ;;
 ;; You can also try 'gd' (or 'C-c c d') to jump to their definition and see how
 ;; they are implemented.
+
+
+;; This set keybinding for Truncate Lines (wrapping)
+;; SPC t t set by default, but u can change it. Credit to Distro Tube
+(map! :leader
+      :desc "Toggle truncate lines"
+      "t t" #'toggle-truncate-lines)
