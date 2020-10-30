@@ -57,6 +57,7 @@ alias grep='grep --color=auto'
 
 # Some Flags
 alias rm='rm -i'
+alias youtube-dl='youtube-dl -i'
 
 # youtube-dl -- Credit to Distro Tube
 alias yta-best="youtube-dl --extract-audio --audio-format best "
