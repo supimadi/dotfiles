@@ -37,7 +37,8 @@ VENV="\$(virtualenv_info)";
 
 
 # Prompt Customize
-PS1="\n \[\033[0;34m\]┌───(\[\033[1;35m\]\u\[\033[0;34m\])───(\[\033[1;32m\]\w\[\033[0;34m\])${VENV}\n └> \[\033[1;36m\]\$ \[\033[0m\]";
+PS1="\n \[\033[0;34m\]┌──(\[\033[1;36m\]\w\[\033[0;34m\])${VENV}\n └> \[\033[1;31m\]\$ \[\033[0m\]";
+#PS1="\n \[\033[0;34m\]┌───(\[\033[1;35m\]\u\[\033[0;34m\])───(\[\033[1;32m\]\w\[\033[0;34m\])${VENV}\n └> \[\033[1;36m\]\$ \[\033[0m\]";
 
 
 # ignore upper and lowercase when TAB completion
@@ -56,7 +57,8 @@ alias dgit='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'
 alias grep='grep --color=auto'
 
 # Some Flags
-alias rm='rm -i'
+alias rm='rm -I'
+alias du='du -sh'
 alias youtube-dl='youtube-dl -i'
 
 # youtube-dl -- Credit to Distro Tube

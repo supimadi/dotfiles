@@ -18,7 +18,7 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 ### WINDOW
-border.width: 2
+border.width: 0
 
 window.client.padding.width: 0
 window.client.padding.height: 0
@@ -38,9 +38,9 @@ window.active.label.text.color: #D3DAE3
 window.inactive.label.text.color: #7F8388
 
 window.active.button.unpressed.image.color: #D3DAE3
-window.active.button.pressed.image.color: #40e0d0
+window.active.button.pressed.image.color: #21CDE2 
 window.active.button.disabled.image.color: #2f343f
-window.active.button.hover.image.color: #afb8c5
+window.active.button.hover.image.color: #80DEEA
 window.active.button.toggled.unpressed.image.color: #D3DAE3
 window.active.button.toggled.pressed.image.color: #40e0d0
 window.active.button.toggled.hover.image.color: #afb8c5

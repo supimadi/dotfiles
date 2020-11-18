@@ -346,9 +346,9 @@
       <action name="Execute">
         <startupnotify>
           <enabled>true</enabled>
-          <name>Thunar</name>
+          <name>PCmanFM</name>
         </startupnotify>
-        <command>thunar</command>
+        <command>pcmanfm</command>
       </action>
     </keybind>
     <keybind key="A-e">
@@ -734,6 +734,20 @@
       <maximized>true</maximized>
       <decor>no</decor>
     </application>
+    <application name="feh">
+      <focus>yes</focus>
+      <maximized>true</maximized>
+      <decor>no</decor>
+    </application>
+    <application class="Godot">
+      <position force="yes">
+        <x>center</x>
+        <y>center</y>
+      </position>
+      <focus>yes</focus>
+    </application>
+    
+
     <!--
   # this is an example with comments through out. use these to make your
   # own rules, but without the comments of course.
