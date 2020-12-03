@@ -53,6 +53,13 @@
 ;; You can also try 'gd' (or 'C-c c d') to jump to their definition and see how
 ;; they are implemented.
 
+;; Here some configuration for rust language
+;;
+;;This command is used for set some flags
+(setq rustic-flycheck-clippy-params "--message-format=json")
+;; Set src bin for rust
+(setq racer-rust-src-path "/home/lukman/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library")
+
 
 ;; This set keybinding for Truncate Lines (wrapping)
 ;; SPC t t set by default, but u can change it. Credit to Distro Tube
