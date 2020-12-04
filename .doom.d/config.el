@@ -66,3 +66,9 @@
 (map! :leader
       :desc "Toggle truncate lines"
       "t t" #'toggle-truncate-lines)
+
+;; Set keybinding for activating virtual env for python
+;; SPC a v is the default key binding
+(map! :leader
+      :desc "Activate Virtual Env (Python)"
+      "a v" #'pyvenv-activate)
