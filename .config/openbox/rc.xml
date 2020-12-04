@@ -177,7 +177,10 @@
     <!-- 'Left', 'Middle', 'Right' -->
   </dock>
   <keyboard>
+
+    <!-- ============================= -->
     <!-- Keybindings for screen brightness and audio -->
+    <!-- ============================= -->
     <keybind key="XF86AudioRaiseVolume">
       <action name="Execute">
         <command>amixer set Master 10%+</command>
@@ -203,6 +206,100 @@
         <command>xbacklight -10</command>
       </action>
     </keybind>
+
+    <!-- =================== -->
+    <!-- Tiling Windows -->
+    <!-- =================== -->
+    <!-- Up side of the screen -->
+    <keybind key="W-k">
+      <!-- binding key, emacs like -->
+      <keybind key="k">
+        <action name="UnmaximizeFull"/>
+          <action name="MoveResizeTo">
+            <x>0</x>
+            <y>0</y>
+            <width>100%</width>
+            <height>50%</height>
+          </action>
+      </keybind>
+      <keybind key="h">
+        <action name="UnmaximizeFull"/>
+          <action name="MoveResizeTo">
+            <x>0</x>
+            <y>0</y>
+            <width>50%</width>
+            <height>50%</height>
+          </action>
+      </keybind>
+      <keybind key="l">
+        <action name="UnmaximizeFull"/>
+          <action name="MoveResizeTo">
+            <x>50%</x>
+            <y>0</y>
+            <width>50%</width>
+            <height>50%</height>
+          </action>
+      </keybind>
+    </keybind>
+    <!-- down side of the screen -->
+    <keybind key="W-j">
+      <!-- binding key, emacs like -->
+      <keybind key="j">
+        <action name="UnmaximizeFull"/>
+          <action name="MoveResizeTo">
+            <x>0</x>
+            <y>50%</y>
+            <width>100%</width>
+            <height>50%</height>
+          </action>
+      </keybind>
+      <keybind key="h">
+        <action name="UnmaximizeFull"/>
+          <action name="MoveResizeTo">
+            <x>0</x>
+            <y>50%</y>
+            <width>50%</width>
+            <height>50%</height>
+          </action>
+      </keybind>
+      <keybind key="l">
+        <action name="UnmaximizeFull"/>
+          <action name="MoveResizeTo">
+            <x>50%</x>
+            <y>50%</y>
+            <width>50%</width>
+            <height>50%</height>
+          </action>
+      </keybind>
+    </keybind>
+    <keybind key="W-h">
+      <action name="UnmaximizeFull"/>
+      <action name="MoveResizeTo">
+        <x>0</x>
+        <y>0</y>
+        <width>50%</width>
+        <height>100%</height>
+      </action>
+    </keybind>
+    <keybind key="W-l">
+      <action name="UnmaximizeFull"/>
+      <action name="MoveResizeTo">
+        <x>50%</x>
+        <y>0</y>
+        <width>50%</width>
+        <height>100%</height>
+      </action>
+    </keybind>
+    <keybind key="W-m">
+      <action name="UnmaximizeFull"/>
+      <action name="MoveResizeTo">
+        <x>0</x>
+        <y>0</y>
+        <width>100%</width>
+        <height>100%</height>
+      </action>
+    </keybind>
+
     <chainQuitKey>C-g</chainQuitKey>
     <!-- Keybindings for desktop switching -->
     <keybind key="C-A-Left">
@@ -229,18 +326,50 @@
         <wrap>no</wrap>
       </action>
     </keybind>
-    <keybind key="S-A-Left">
+
+    <!-- ================================== -->
+    <!-- Move App Windows Through Workspace -->
+    <!-- ================================== -->
+    <!-- use arrow key -->
+    <keybind key="W-Left">
       <action name="SendToDesktop">
         <to>left</to>
         <wrap>no</wrap>
       </action>
     </keybind>
-    <keybind key="S-A-Right">
+    <keybind key="W-Right">
       <action name="SendToDesktop">
         <to>right</to>
         <wrap>no</wrap>
       </action>
     </keybind>
+    <!-- use number key -->
+    <keybind key="W-S-1">
+      <action name="SendToDesktop">
+        <to>1</to>
+        <wrap>no</wrap>
+      </action>
+    </keybind>
+    <keybind key="W-S-2">
+      <action name="SendToDesktop">
+        <to>2</to>
+        <wrap>no</wrap>
+      </action>
+    </keybind>
+    <keybind key="W-S-3">
+      <action name="SendToDesktop">
+        <to>3</to>
+        <wrap>no</wrap>
+      </action>
+    </keybind>
+    <keybind key="W-S-4">
+      <action name="SendToDesktop">
+        <to>4</to>
+        <wrap>no</wrap>
+      </action>
+    </keybind>
+
+
     <keybind key="S-A-Up">
       <action name="SendToDesktop">
         <to>up</to>
@@ -341,14 +470,26 @@
         <direction>down</direction>
       </action>
     </keybind>
+
+    <keybind key="C-space">
+      <action name="Execute">
+        <startupnotify>
+          <enabled>true</enabled>
+          <name>Reconfigure Openbox</name>
+        </startupnotify>
+        <command>openbox --reconfigure</command>
+      </action>
+    </keybind>
+    <!-- ============================= -->
     <!-- Keybindings for running applications -->
+    <!-- ============================= -->
     <keybind key="W-e">
       <action name="Execute">
         <startupnotify>
           <enabled>true</enabled>
-          <name>PCmanFM</name>
+          <name>Thunar</name>
         </startupnotify>
-        <command>pcmanfm</command>
+        <command>thunar</command>
       </action>
     </keybind>
     <keybind key="A-e">
@@ -388,6 +529,11 @@
       </action>
     </keybind>
   </keyboard>
+
+
+  <!-- ================== -->
+  <!-- Mouse Configuration -->
+  <!-- ================== -->
   <mouse>
     <dragThreshold>1</dragThreshold>
     <!-- number of pixels the mouse must move before a drag begins -->
@@ -651,6 +797,9 @@
         <action name="Raise"/>
       </mousebind>
     </context>
+
+
+
     <context name="Root">
       <!-- Menus -->
       <mousebind button="Middle" action="Press">
@@ -687,6 +836,9 @@
       </mousebind>
     </context>
   </mouse>
+
+
+
   <menu>
     <!-- You can specify more than one menu file in here and they are all loaded,
        just don't make menu ids clash or, well, it'll be kind of pointless -->
@@ -712,6 +864,10 @@
     <manageDesktops>yes</manageDesktops>
     <!-- show the manage desktops section in the client-list-(combined-)menu -->
   </menu>
+
+  <!-- ============================== -->
+  <!--  Roles For Apps -->
+  <!-- ============================== -->
   <applications>
     <application name="*termite*">
       <focus>yes</focus>
