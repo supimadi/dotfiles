@@ -471,6 +471,7 @@
       </action>
     </keybind>
 
+    <!-- keybinding for reconfigure openbox -->
     <keybind key="C-space">
       <action name="Execute">
         <startupnotify>
@@ -481,7 +482,7 @@
       </action>
     </keybind>
     <!-- ============================= -->
-    <!-- Keybindings for running applications -->
+    <!-- Keybindings for launching applications -->
     <!-- ============================= -->
     <keybind key="W-e">
       <action name="Execute">
