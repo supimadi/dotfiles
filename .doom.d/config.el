@@ -19,13 +19,18 @@
 ;;
 ;; They all accept either a font-spec, font string ("Input Mono-12"), or xlfd
 ;; font string. You generally only need these two:
-(setq doom-font (font-spec :family "JetBrains Mono" :size 13 :weight 'semi-light)
+(setq doom-font (font-spec :family "JetBrains Mono" :size 13)
       doom-variable-pitch-font (font-spec :family "sans" :size 13))
 
 ;; There are two ways to load a theme. Both assume the theme is installed and
 ;; available. You can either set `doom-theme' or manually load a theme with the
 ;; `load-theme' function. This is the default:
-(setq doom-theme 'doom-one)
+(setq doom-theme 'doom-vibrant)
+(delq! t custom-theme-load-path)
+;; Change modified color from red to orange
+(custom-set-faces!
+  '(doom-modeline-buffer-modified :foreground "orange"))
+
 
 ;; If you use `org' and don't want your org files in the default location below,
 ;; change `org-directory'. It must be set before org loads!
@@ -60,7 +65,17 @@
 ;; Set src bin for rust
 (setq racer-rust-src-path "/home/lukman/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library")
 
+;; Remove encoding info in mode line
+(defun doom-modeline-conditional-buffer-encoding ()
+  "We expect the encoding to be LF UTF-8, so only show the modeline when this is not the case"
+  (setq-local doom-modeline-buffer-encoding
+              (unless (or (eq buffer-file-coding-system 'utf-8-unix)
+                          (eq buffer-file-coding-system 'utf-8)))))
 
+(add-hook 'after-change-major-mode-hook #'doom-modeline-conditional-buffer-encoding)
+
+
+;; KEY BINDINGS
 ;; This set keybinding for Truncate Lines (wrapping)
 ;; SPC t t set by default, but u can change it. Credit to Distro Tube
 (map! :leader
@@ -72,3 +87,7 @@
 (map! :leader
       :desc "Activate Virtual Env (Python)"
       "a v" #'pyvenv-activate)
+
+(map! :desc "Redo last action"
+      :n
+      "R" #'evil-redo)
