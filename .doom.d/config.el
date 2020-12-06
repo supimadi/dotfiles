@@ -19,8 +19,14 @@
 ;;
 ;; They all accept either a font-spec, font string ("Input Mono-12"), or xlfd
 ;; font string. You generally only need these two:
-(setq doom-font (font-spec :family "JetBrains Mono" :size 13)
-      doom-variable-pitch-font (font-spec :family "sans" :size 13))
+(setq doom-font (font-spec :family "JetBrains Mono" :size 14)
+      doom-serif-font (font-spec :family "IBM Plex Mono" :weight 'light)
+      doom-variable-pitch-font (font-spec :family "Ubuntu" :size 13))
+(after! doom-themes
+  (setq doom-themes-enable-bold t
+        doom-themes-enable-italic t))
+(custom-set-faces!
+  '(font-lock-comment-face :slant italic))
 
 ;; There are two ways to load a theme. Both assume the theme is installed and
 ;; available. You can either set `doom-theme' or manually load a theme with the
@@ -75,7 +81,8 @@
 (add-hook 'after-change-major-mode-hook #'doom-modeline-conditional-buffer-encoding)
 
 
-;; KEY BINDINGS
+;; Here some costum configuration for key bindings
+;;
 ;; This set keybinding for Truncate Lines (wrapping)
 ;; SPC t t set by default, but u can change it. Credit to Distro Tube
 (map! :leader
@@ -83,11 +90,24 @@
       "t t" #'toggle-truncate-lines)
 
 ;; Set keybinding for activating virtual env for python
-;; SPC a v is the default key binding
+;; SPC a v is the set key binding
 (map! :leader
-      :desc "Activate Virtual Env (Python)"
+      :desc "Activate python venv"
       "a v" #'pyvenv-activate)
 
 (map! :desc "Redo last action"
       :n
-      "R" #'evil-redo)
+      "U" #'evil-redo)
+
+;; Here setting for vertical and horizontal split
+;; Open buffer menu after split screen
+(setq evil-vsplit-window-right t
+      evil-split-window-below t)
+;; open ivi
+(defadvice! prompt-for-buffer (&rest _)
+  :after '(evil-window-split evil-window-vsplit)
+  (+ivy/switch-buffer))
+;; set preview
+(setq +ivy-buffer-preview t)
+
+
