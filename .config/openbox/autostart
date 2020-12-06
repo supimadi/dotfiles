@@ -30,4 +30,4 @@ $HOME/.config/polybar/launch.sh &
 ~/.fehbg &
 
 # Battery Notification
-batsignal -b -w 20 -c 15 -d 10 -f 99 -W "Carger Mana? Colok Buru!" -C "Denge Teu?! Cas Goblog!" -F "Seger Beuh! Battery Full."
+batsignal -b -w 20 -c 15 -d 10 -W "Carger Mana? Colok Buru!" -C "Denge Teu?! Cas Goblog!" 
