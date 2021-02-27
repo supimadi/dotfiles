@@ -57,7 +57,7 @@
             <item label="PCSX2"> <action name="Execute">
                 <execute>env GDK_BACKEND=x11 __GL_THREADED_OPTIMIZATIONS=1 mesa_glthread=true MESA_NO_ERROR=1 PCSX2</execute>
             </action> </item>
-            <item label="PCSX2"> <action name="Execute">
+            <item label="PCSX2 Nvidia"> <action name="Execute">
                 <execute>prime-run env __GL_THREADED_OPTIMIZATIONS=1 PCSX2</execute>
             </action> </item>
         </menu>

@@ -35,7 +35,7 @@
 (delq! t custom-theme-load-path)
 ;; Change modified color from red to orange
 (custom-set-faces!
-  '(doom-modeline-buffer-modified :foreground "orange"))
+  '(doom-modeline-buffer-modified :foreground "cornflower blue"))
 
 
 ;; If you use `org' and don't want your org files in the default location below,
@@ -95,6 +95,8 @@
       :desc "Activate python venv"
       "a v" #'pyvenv-activate)
 
+;; Set keybinding for redo last action
+;; (capital) U is the set key binding
 (map! :desc "Redo last action"
       :n
       "U" #'evil-redo)
