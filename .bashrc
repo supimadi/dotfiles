@@ -3,7 +3,7 @@
 #
 
 # Exporting Variables
-export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$HOME/.carbon/bin:$PATH"
 export TERM="xterm-256color"
 export EDITOR='vim'
 
@@ -44,7 +44,6 @@ PS1="\n \[\033[0;34m\]┌──(\[\033[1;36m\]\w\[\033[0;34m\])${VENV}\n └> \[
 # ignore upper and lowercase when TAB completion
 bind "set completion-ignore-case on"
 
-
 # Aliases
 alias ..='cd ..'
 alias ls='lsd'
@@ -68,3 +67,5 @@ alias yta-m4a="youtube-dl --extract-audio --audio-format m4a "
 alias yta-mp3="youtube-dl --extract-audio --audio-format mp3 "
 alias yta-wav="youtube-dl --extract-audio --audio-format wav "
 alias ytv-best="youtube-dl -f bestvideo+bestaudio "
+
+source "$HOME/.cargo/env"
