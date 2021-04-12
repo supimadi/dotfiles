@@ -406,7 +406,7 @@
       <action name="ToggleShowDesktop"/>
     </keybind>
     <!-- Keybindings for windows -->
-    <keybind key="W-w">
+    <keybind key="W-Return">
       <action name="Close"/>
     </keybind>
     <keybind key="A-Escape">
