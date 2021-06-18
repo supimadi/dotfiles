@@ -35,7 +35,7 @@
 (delq! t custom-theme-load-path)
 ;; Change modified color from red to orange
 (custom-set-faces!
-  '(doom-modeline-buffer-modified :foreground "cornflower blue"))
+  '(doom-modeline-buffer-modified :foreground "white smoke"))
 
 
 ;; If you use `org' and don't want your org files in the default location below,
