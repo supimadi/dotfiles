@@ -884,6 +884,16 @@
       </size>
       <decor>no</decor>
     </application>
+
+    <application title="Firefox Developer Edition">
+      <focus>yes</focus>
+      <size>
+        <width>100%</width>
+        <height>100%</height>
+      </size>
+      <decor>no</decor>
+    </application>
+
     <application role="browser">
       <focus>yes</focus>
       <decor>no</decor>
